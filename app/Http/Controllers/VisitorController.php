@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class VisitorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-       $data = Article::all();
-
-       return view('pages.article.index', compact('data'));
+        //
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +24,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-         return view('pages.article.create');
+        //
     }
 
     /**
@@ -38,40 +35,16 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required',
-            'sub_title'=>'required',
-            'article'=> 'required'
-        ]);
-
-
-        $data_article = [
-            'title' => $request->title, 
-            'sub_title'=> $request->sub_title, 
-            'article'=> $request->article
-        ];
-
-        $action = Article::create($data_article);
-
-
-        if ($action) {
-            return redirect('/');
-        } else {
-            return false;
-        }
-
-       
-        
-        
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\article  $article
+     * @param  \App\Models\Visitor  $visitor
      * @return \Illuminate\Http\Response
      */
-    public function show(article $article)
+    public function show(Visitor $visitor)
     {
         //
     }
@@ -79,10 +52,10 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\article  $article
+     * @param  \App\Models\Visitor  $visitor
      * @return \Illuminate\Http\Response
      */
-    public function edit(article $article)
+    public function edit(Visitor $visitor)
     {
         //
     }
@@ -91,10 +64,10 @@ class ArticleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\article  $article
+     * @param  \App\Models\Visitor  $visitor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, article $article)
+    public function update(Request $request, Visitor $visitor)
     {
         //
     }
@@ -102,10 +75,10 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\article  $article
+     * @param  \App\Models\Visitor  $visitor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(article $article)
+    public function destroy(Visitor $visitor)
     {
         //
     }

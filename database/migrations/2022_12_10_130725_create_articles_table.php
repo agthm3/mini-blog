@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->string('sub_title');
             $table->string('article');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

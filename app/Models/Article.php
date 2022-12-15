@@ -26,6 +26,10 @@ class article extends Model
     public function comments(){
         return $this->hasMany(comment::class, 'article_id');
     }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
 
 
