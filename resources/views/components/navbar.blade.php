@@ -9,16 +9,16 @@
 
            <div class="navbar-collapse collapse" id="navbarContent">
                <ul class="navbar-nav ml-auto">
-                   <li class="nav-item active">
+                   <li class="{{ session('active_button') == 'home' ? 'active' : '' }}">
                        <a class="nav-link" href="{{ route('index') }}">Home</a>
                    </li>
-                   <li class="nav-item">
+                   <li class="nav-item {{ session('active_button') == 'portofolio' ? 'active' : '' }}">
                        <a class="nav-link" href="{{ route('index.portofolio') }}">Portofolio</a>
                    </li>
-                   <li class="nav-item">
+                   <li class="nav-item {{ session('active_button') == 'blog' ? 'active' : '' }}">
                        <a class="nav-link" href="{{ route('index.blog') }}">Blog</a>
                    </li>
-                   <li class="nav-item">
+                   <li class="nav-item {{ session('active_button') == 'kontak' ? 'active' : '' }}">
                        <a class="nav-link" href="{{ route('index.kontak') }}">Kontak</a>
                    </li>
                </ul>

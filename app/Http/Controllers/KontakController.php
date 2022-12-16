@@ -13,6 +13,9 @@ class KontakController extends Controller
      */
     public function index()
     {
+        //Logic untuk mengaktifkan warna di navbar
+        session(['active_button' => 'kontak']);
+
         return view('pages.kontak.index');
     }
 

@@ -3,18 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\article;
+use App\Models\Portofolio;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+
 
 class PortofolioController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource.'
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-         $data = Article::all();
+    {   
+        $data = Portofolio::with('user')->get();
+
+          //Logic untuk mengaktifkan warna di navbar
+          session(['active_button' => 'portofolio']);
+
+        // $data = User::with('portofolio_id')->has('portofolio_id')->get();
         return view('pages.portofolio.index', compact('data'));
     }
 

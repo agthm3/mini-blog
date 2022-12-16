@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Portofolio_gallerie;
 use Illuminate\Http\Request;
-use App\Models\article;
 
-class HomeController extends Controller
+class PortofolioGallerieController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-          $data = Article::latest()->take(3)->get();
-
-          //Logic untuk mengaktifkan warna di navbar
-          session(['active_button' => 'home']);
-
-          return view('pages.welcome.index', compact('data'));
+        //
     }
 
     /**
@@ -46,10 +41,10 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Portofolio_gallerie  $portofolio_gallerie
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Portofolio_gallerie $portofolio_gallerie)
     {
         //
     }
@@ -57,10 +52,10 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Portofolio_gallerie  $portofolio_gallerie
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Portofolio_gallerie $portofolio_gallerie)
     {
         //
     }
@@ -69,10 +64,10 @@ class HomeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Portofolio_gallerie  $portofolio_gallerie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Portofolio_gallerie $portofolio_gallerie)
     {
         //
     }
@@ -80,10 +75,10 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Portofolio_gallerie  $portofolio_gallerie
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Portofolio_gallerie $portofolio_gallerie)
     {
         //
     }

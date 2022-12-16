@@ -16,6 +16,9 @@ class ArticleController extends Controller
     {
        $data = Article::all();
 
+        //Logic untuk mengaktifkan warna di navbar
+        session(['active_button' => 'blog']);
+
        return view('pages.article.index', compact('data'));
     }
 

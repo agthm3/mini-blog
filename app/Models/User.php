@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Portofolio;
 
 class User extends Authenticatable
 {
@@ -25,6 +26,11 @@ class User extends Authenticatable
 
     public function article(){
         return $this->hasMany(article::class, 'user_id');
+    }
+
+
+    public function portofolios(){
+        return $this->hasMany(Portofolio::class, 'user_id');
     }
 
     /**
