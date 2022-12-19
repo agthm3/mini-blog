@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\article;
-use App\Models\Portofolio;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,13 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-          $data = Article::latest()->take(3)->get();
-          $porto = Portofolio::latest()->take(3)->get();
-
-          //Logic untuk mengaktifkan warna di navbar
-          session(['active_button' => 'home']);
-
-          return view('pages.welcome.index', compact('data', 'porto'));
+        //
     }
 
     /**

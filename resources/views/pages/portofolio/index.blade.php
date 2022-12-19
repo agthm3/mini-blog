@@ -27,37 +27,37 @@
     <div class="page-section">
         <div class="container">
             <!-- <div class="row">
-                                                <div class="col-sm-10">
-                                                    <form action="#" class="form-search-blog">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <select
-                                                                    id="categories"
-                                                                    class="custom-select bg-light"
-                                                                >
-                                                                    <option>All Categories</option>
-                                                                    <option value="travel">Travel</option>
-                                                                    <option value="lifestyle">
-                                                                        LifeStyle
-                                                                    </option>
-                                                                    <option value="healthy">Healthy</option>
-                                                                    <option value="food">Food</option>
-                                                                </select>
-                                                            </div>
-                                                            <input
-                                                                type="text"
-                                                                class="form-control"
-                                                                placeholder="Enter keyword.."
-                                                            />
+                                                        <div class="col-sm-10">
+                                                            <form action="#" class="form-search-blog">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <select
+                                                                            id="categories"
+                                                                            class="custom-select bg-light"
+                                                                        >
+                                                                            <option>All Categories</option>
+                                                                            <option value="travel">Travel</option>
+                                                                            <option value="lifestyle">
+                                                                                LifeStyle
+                                                                            </option>
+                                                                            <option value="healthy">Healthy</option>
+                                                                            <option value="food">Food</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <input
+                                                                        type="text"
+                                                                        class="form-control"
+                                                                        placeholder="Enter keyword.."
+                                                                    />
+                                                                </div>
+                                                            </form>
                                                         </div>
-                                                    </form>
-                                                </div>
-                                                <div class="col-sm-2 text-sm-right">
-                                                    <button class="btn btn-secondary">
-                                                        Filter <span class="mai-filter"></span>
-                                                    </button>
-                                                </div>
-                                            </div> -->
+                                                        <div class="col-sm-2 text-sm-right">
+                                                            <button class="btn btn-secondary">
+                                                                Filter <span class="mai-filter"></span>
+                                                            </button>
+                                                        </div>
+                                                    </div> -->
 
             <div class="row my-5">
                 @foreach ($data as $item)
@@ -73,7 +73,7 @@
                                     <a href="blog-details.html">{{ $item->title }}</a>
                                 </h5>
                                 <div class="post-date">
-                                    Posted on <a href="#">{{ $item->created_at }}</a>
+                                    Posted on <a href="#">{{ $item->created_at->format('d-m-Y') }}</a>
                                 </div>
                             </div>
                         </div>

@@ -5,9 +5,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 py-3 wow fadeInUp">
                     <!-- <span class="subhead">About us</span>
-                                                                                            <h2 class="title-section">
-                                                                                                The number #1 SEO Service Company
-                                                                                            </h2> -->
+                                                                                                                                        <h2 class="title-section">
+                                                                                                                                            The number #1 SEO Service Company
+                                                                                                                                        </h2> -->
                     <div class="divider"></div>
 
                     <p>
@@ -58,7 +58,7 @@
                                     <a href="blog-details.html">{{ $item->title }}</a>
                                 </h5>
                                 <div class="post-date">
-                                    Diposting Pada <a href="#">{{ $item->created_at }}</a>
+                                    Diposting Pada <a href="#">{{ $item->created_at->format('d-m-Y') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -112,62 +112,26 @@
                 <div class="divider mx-auto"></div>
             </div>
             <div class="row my-3">
-                <div class="col-lg-4 py-3">
-                    <div class="card-blog">
-                        <div class="header">
-                            <div class="post-thumb">
-                                <img src="../assets/img/blog/blog-1.jpg" alt="" />
+                @foreach ($porto as $item)
+                    <div class="col-lg-4 py-3">
+                        <div class="card-blog">
+                            <div class="header">
+                                <div class="post-thumb">
+                                    <img src="../assets/img/blog/blog-1.jpg" alt="" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="body">
-                            <h5 class="post-title">
-                                <a href="portofolio-details.html">Source of Content Inspiration</a>
-                            </h5>
-                            <div class="post-date">
-                                Posted on <a href="#">27 Jan 2020</a>
+                            <div class="body">
+                                <h5 class="post-title">
+                                    <a href="portofolio-details.html">{{ $item->title }}</a>
+                                </h5>
+                                <div class="post-date">
+                                    Diposting pada <a href="#">{{ $item->created_at->format('d-m-Y') }}</a>
+                                </div>
+                                <a href="about.html" class="btn btn-primary mt-3">Live Preview</a>
                             </div>
-                            <a href="about.html" class="btn btn-primary mt-3">Live Preview</a>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-lg-4 py-3">
-                    <div class="card-blog">
-                        <div class="header">
-                            <div class="post-thumb">
-                                <img src="../assets/img/blog/blog-2.jpg" alt="" />
-                            </div>
-                        </div>
-                        <div class="body">
-                            <h5 class="post-title">
-                                <a href="portofolio-details.html">Source of Content Inspiration</a>
-                            </h5>
-                            <div class="post-date">
-                                Posted on <a href="#">27 Jan 2020</a>
-                            </div>
-                            <a href="about.html" class="btn btn-primary mt-3">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 py-3">
-                    <div class="card-blog">
-                        <div class="header">
-                            <div class="post-thumb">
-                                <img src="../assets/img/blog/blog-3.jpg" alt="" />
-                            </div>
-                        </div>
-                        <div class="body">
-                            <h5 class="post-title">
-                                <a href="portofolio-details.html">Source of Content Inspiration</a>
-                            </h5>
-                            <div class="post-date">
-                                Posted on <a href="#">27 Jan 2020</a>
-                            </div>
-                            <a href="about.html" class="btn btn-primary mt-3">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 

@@ -23,7 +23,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-10">
-                    <form action="#" class="form-search-blog">
+                    <form action="{{ route('search') }}" class="form-search-blog" method="GET">
+                        @csrf
+                        @method('GET')
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <select id="categories" class="custom-select bg-light">
@@ -34,18 +36,15 @@
                                     <option value="food">Food</option>
                                 </select>
                             </div>
-                            <input type="text" class="form-control" placeholder="Enter keyword..">
+                            <input type="text" class="form-control" name="query" placeholder="Enter keyword..">
                         </div>
                     </form>
-                </div>
-                <div class="col-sm-2 text-sm-right">
-                    <button class="btn btn-secondary">Filter <span class="mai-filter"></span></button>
                 </div>
             </div>
 
             <div class="row my-5">
 
-                @foreach ($data as $item)
+                {{-- @foreach ($data as $item)
                     <div class="col-lg-4 py-3">
                         <div class="card-blog">
                             <div class="header">
@@ -55,11 +54,35 @@
                             </div>
                             <div class="body">
                                 <h5 class="post-title"><a href="blog-details.html">{{ $item->title }}</a></h5>
-                                <div class="post-date">Diposting pada <a href="#">{{ $item->created_at }}</a></div>
+                                <div class="post-date">Diposting pada <a
+                                        href="#">{{ $item->created_at->format('d-m-Y') }}</a></div>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endforeach --}}
+                @if (count($data) > 0)
+                    @foreach ($data as $item)
+                        <div class="col-lg-4 py-3">
+                            <div class="card-blog">
+                                <div class="header">
+                                    <div class="post-thumb">
+                                        <img src="../assets/img/blog/blog-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <h5 class="post-title"><a href="blog-details.html">{{ $item->title }}</a></h5>
+                                    <div class="post-date">Diposting pada <a
+                                            href="#">{{ $item->created_at->format('d-m-Y') }}</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="col-12 text-center">
+                        <p>Tidan tidak ditemukan artikel yang sesuai dengan kata kunci </p>
+                    </div>
+                @endif
+
             </div>
 
             <nav aria-label="Page Navigation">
