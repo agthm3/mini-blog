@@ -23,45 +23,48 @@
 @endsection
 
 @section('content')
-    <div class="page-section">
-        <div class="container">
-            <div class="row text-center align-items-center">
-                <div class="col-lg-4 py-3">
-                    <div class="display-4 text-center text-primary">
-                        <span class="inbox"></span>
-                        <i class="fa fa-solid fa-envelope"></i>
+    @foreach ($data as $data)
+        <div class="page-section">
+            <div class="container">
+                <div class="row text-center align-items-center">
+                    <div class="col-lg-4 py-3">
+                        <div class="display-4 text-center text-primary">
+                            <span class="inbox"></span>
+                            <i class="fa fa-solid fa-envelope"></i>
+                        </div>
+                        <p class="mb-3 font-weight-medium text-lg">Email</p>
+                        <p class="mb-0 text-secondary">
+                            Email dengan subject "Permintaan Kerjasama" ke email
+                            gigam57@gmail.com
+                        </p>
+                        <a href="mailto:{{ $data->email_url }}subject=Permintaan Kerjasama&body=Halo, saya ingin mengajukan permintaan kerjasama dengan Anda. Mohon untuk dapat dihubungi melalui email atau telepon."
+                            class="btn btn-primary mt-3">Link Email</a>
                     </div>
-                    <p class="mb-3 font-weight-medium text-lg">Email</p>
-                    <p class="mb-0 text-secondary">
-                        Email dengan subject "Permintaan Kerjasama" ke email
-                        gigam57@gmail.com
-                    </p>
-                    <a href="about.html" class="btn btn-primary mt-3">Link Email</a>
-                </div>
-                <div class="col-lg-4 py-3">
-                    <div class="display-4 text-center text-primary">
-                        <i class="fa fa-brands fa-linkedin"></i>
+                    <div class="col-lg-4 py-3">
+                        <div class="display-4 text-center text-primary">
+                            <i class="fa fa-brands fa-linkedin"></i>
+                        </div>
+                        <p class="mb-3 font-weight-medium text-lg">Linkedin</p>
+                        <p class="mb-0 text-secondary">
+                            Lihat lebih banyak, mulai dari rekam jejak
+                            organisasi hingga pekerjaan
+                        </p>
+                        <a href="{{ $data->linkedin_url }}" class="btn btn-primary mt-3">Link LinkedIn</a>
                     </div>
-                    <p class="mb-3 font-weight-medium text-lg">Linkedin</p>
-                    <p class="mb-0 text-secondary">
-                        Lihat lebih banyak, mulai dari rekam jejak
-                        organisasi hingga pekerjaan
-                    </p>
-                    <a href="about.html" class="btn btn-primary mt-3">Link LinkedIn</a>
-                </div>
-                <div class="col-lg-4 py-3">
-                    <div class="display-4 text-center text-primary">
-                        <i class="fa fa-brands fa-youtube"></i>
+                    <div class="col-lg-4 py-3">
+                        <div class="display-4 text-center text-primary">
+                            <i class="fa fa-brands fa-youtube"></i>
+                        </div>
+                        <p class="mb-3 font-weight-medium text-lg">Youtube</p>
+                        <p class="mb-0 text-secondary">
+                            Terkadang saya membuat beberapa video mengenai
+                            pemikiran, pengalaman dan dokumenter dari kegiatan
+                            yang saya ikuti
+                        </p>
+                        <a href="{{ $data->youtube_url }}" class="btn btn-primary mt-3">Live Youtube</a>
                     </div>
-                    <p class="mb-3 font-weight-medium text-lg">Youtube</p>
-                    <p class="mb-0 text-secondary">
-                        Terkadang saya membuat beberapa video mengenai
-                        pemikiran, pengalaman dan dokumenter dari kegiatan
-                        yang saya ikuti
-                    </p>
-                    <a href="about.html" class="btn btn-primary mt-3">Live Youtube</a>
                 </div>
             </div>
         </div>
-    </div>
+    @endforeach
 @endsection

@@ -14,12 +14,12 @@ class ArticleController extends Controller
      */
     public function index()
     {
-       $data = Article::all();
        
 
         //Logic untuk mengaktifkan warna di navbar
         session(['active_button' => 'blog']);
 
+       $data = Article::all();
        return view('pages.article.index', compact('data'));
     }
 

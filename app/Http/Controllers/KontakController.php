@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kontak;
 use Illuminate\Http\Request;
 
 class KontakController extends Controller
@@ -16,7 +17,10 @@ class KontakController extends Controller
         //Logic untuk mengaktifkan warna di navbar
         session(['active_button' => 'kontak']);
 
-        return view('pages.kontak.index');
+        $data = Kontak::all();
+
+        return view('pages.kontak.index', compact('data'));
+  
     }
 
     /**
