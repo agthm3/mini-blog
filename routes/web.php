@@ -36,7 +36,8 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 //Blog Route
 Route::post('/article', [ArticleController::class, 'store'])->name('store');
 Route::get('/create', [ArticleController::class, 'create'])->name('create');
-Route::get('/blog', [ArticleController::class, 'index'])->name('index.blog');
+Route::get('/blog', [ArticleController::class, 'index'])->name('index.blog'); //getAll article
+Route::get('/blog/{id}', [ArticleController::class, 'show'])->name('show.blog');
 
 //Portofolio Route
 Route::get('/portofolio', [PortofolioController::class, 'index'])->name('index.portofolio');

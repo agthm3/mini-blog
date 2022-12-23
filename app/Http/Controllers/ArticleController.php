@@ -24,26 +24,26 @@ class ArticleController extends Controller
     }
 
     public function search(Request $request)
-{
-    $query = $request->input('query');
-    $categories = $request->input('categories');
+    {
+        $query = $request->input('query');
+        $categories = $request->input('categories');
 
-    // Jika categories tidak diisi, maka cari semua artikel yang judulnya mengandung kata kunci $query
-    if (empty($categories)) {
-        $data = Article::where('title', 'like', '%' . $query . '%')
-                ->orWhere('article', 'like', '%'. $query. '%')
-                ->orWhere('sub_title', 'like', '%'. $query . '%' )
+        // Jika categories tidak diisi, maka cari semua artikel yang judulnya mengandung kata kunci $query
+        if (empty($categories)) {
+            $data = Article::where('title', 'like', '%' . $query . '%')
+                    ->orWhere('article', 'like', '%'. $query. '%')
+                    ->orWhere('sub_title', 'like', '%'. $query . '%' )
+                    ->paginate(9);
+        }
+        // Jika categories diisi, maka cari semua artikel yang judulnya mengandung kata kunci $query dan kategori sesuai dengan $categories
+        else {
+            $data = Article::where('title', 'like', '%' . $query . '%')
+                ->where('categories', $categories)
                 ->paginate(9);
-    }
-    // Jika categories diisi, maka cari semua artikel yang judulnya mengandung kata kunci $query dan kategori sesuai dengan $categories
-    else {
-        $data = Article::where('title', 'like', '%' . $query . '%')
-            ->where('categories', $categories)
-            ->paginate(9);
-    }
+        }
 
-    return view('pages.article.index', compact('data'));
-}
+        return view('pages.article.index', compact('data'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -96,9 +96,15 @@ class ArticleController extends Controller
      * @param  \App\Models\article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(article $article)
-    {
-        //
+    public function show($id)
+    {   
+
+        // dd($id);
+        $data = Article::findOrFail($id);
+        $article = Article::latest()->take(3)->get();
+        
+        return view('pages.article.detail', compact('data', 'article'));
+    
     }
 
     /**

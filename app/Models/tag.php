@@ -10,7 +10,7 @@ class tag extends Model
 {
     use HasFactory;
 
-
+    protected $guarded = ['id'];
     public function article(){
         return $this->belongsTo(article::class, 'article_id');
     }
