@@ -55,7 +55,10 @@ class PortofolioController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Portofolio::findOrFail($id);
+        $porto = Portofolio::latest()->take(3)->get();
+        
+        return view('pages.portofolio.details', compact('data', 'porto'));
     }
 
     /**

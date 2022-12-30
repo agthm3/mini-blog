@@ -41,6 +41,7 @@ Route::get('/blog/{id}', [ArticleController::class, 'show'])->name('show.blog');
 
 //Portofolio Route
 Route::get('/portofolio', [PortofolioController::class, 'index'])->name('index.portofolio');
+Route::get('/portofolio/{id}', [PortofolioController::class, 'show'])->name('show.portofolio');
 
 
 //Kontak Route
