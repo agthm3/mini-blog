@@ -41,6 +41,7 @@
                         <h1 class="post-title">
                             {{ $data->title }}
                         </h1>
+                        <h6 class="post-title">{{ $data->sub_title }}</h6>
                         <div class="post-meta">
                             <div class="post-date">
                                 <span class="icon">

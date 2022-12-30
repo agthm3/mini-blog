@@ -70,7 +70,9 @@
                                     </div>
                                 </div>
                                 <div class="body">
-                                    <h5 class="post-title"><a href="blog-details.html">{{ $item->title }}</a></h5>
+                                    <h5 class="post-title"><a
+                                            href="{{ route('show.blog', ['id' => $item->id]) }}">{{ $item->title }}</a>
+                                    </h5>
                                     <div class="post-date">Diposting pada <a
                                             href="#">{{ $item->created_at->format('d-m-Y') }}</a></div>
                                 </div>
