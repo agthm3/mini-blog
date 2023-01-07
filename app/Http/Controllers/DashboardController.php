@@ -13,7 +13,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+   
+        return view('dashboard.index');
+    }
+
+    public function blog(){
+        return view('dashboard.blog.index');
     }
 
     /**
@@ -23,7 +28,7 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.blog.create');
     }
 
     /**

@@ -58,27 +58,6 @@
                             <i class="fe fe-sun fe-16"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link text-muted my-2"
-                            href="./#"
-                            data-toggle="modal"
-                            data-target=".modal-shortcut"
-                        >
-                            <span class="fe fe-grid fe-16"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item nav-notif">
-                        <a
-                            class="nav-link text-muted my-2"
-                            href="./#"
-                            data-toggle="modal"
-                            data-target=".modal-notif"
-                        >
-                            <span class="fe fe-bell fe-16"></span>
-                            <span class="dot dot-md bg-success"></span>
-                        </a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a
                             class="nav-link dropdown-toggle text-muted pr-0"
@@ -502,7 +481,7 @@
                                 class="dropdown-toggle nav-link"
                             >
                                 <i class="fe fe-book fe-16"></i>
-                                <span class="ml-3 item-text">Contacts</span>
+                                <span class="ml-3 item-text">Artikel</span>
                             </a>
                             <ul
                                 class="collapse list-unstyled pl-4 w-100"
@@ -546,6 +525,16 @@
                                     class="nav-link pl-3"
                                     href="./profile-settings.html"
                                     ><span class="ml-1">Settings</span></a
+                                >
+                                <a
+                                    class="nav-link pl-3"
+                                    href="./profile-security.html"
+                                    ><span class="ml-1">Security</span></a
+                                >
+                                <a
+                                    class="nav-link pl-3"
+                                    href="./profile-notification.html"
+                                    ><span class="ml-1">Notifications</span></a
                                 >
                             </ul>
                         </li>
@@ -807,240 +796,787 @@
             <main role="main" class="main-content">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
-                        <div class="col-12 col-lg-10 col-xl-8">
-                            <h2 class="h3 mb-4 page-title">Settings</h2>
-                            <div class="my-4">
-                                <ul
-                                    class="nav nav-tabs mb-4"
-                                    id="myTab"
-                                    role="tablist"
-                                >
-                                    <li class="nav-item">
-                                        <a
-                                            class="nav-link active"
-                                            id="home-tab"
-                                            data-toggle="tab"
-                                            href="#home"
-                                            role="tab"
-                                            aria-controls="home"
-                                            aria-selected="true"
-                                            >Profile</a
-                                        >
-                                    </li>
-                                </ul>
-                                <form>
-                                    <div class="row mt-5 align-items-center">
-                                        <div class="col-md-3 text-center mb-5">
-                                            <div class="avatar avatar-xl">
-                                                <img
-                                                    src="./assets/avatars/face-1.jpg"
-                                                    alt="..."
-                                                    class="avatar-img rounded-circle"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="row align-items-center">
-                                                <div class="col-md-7">
-                                                    <h4 class="mb-1">
-                                                        Brown, Asher
-                                                    </h4>
-                                                    <p class="small mb-3">
-                                                        <span
-                                                            class="badge badge-dark"
-                                                            >New York, USA</span
-                                                        >
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-4">
-                                                <div class="col-md-7">
-                                                    <p class="text-muted">
-                                                        Lorem ipsum dolor sit
-                                                        amet, consectetur
-                                                        adipiscing elit. Mauris
-                                                        blandit nisl
-                                                        ullamcorper, rutrum
-                                                        metus in, congue lectus.
-                                                        In hac habitasse platea
-                                                        dictumst. Cras urna
-                                                        quam, malesuada vitae
-                                                        risus at, pretium
-                                                        blandit sapien.
-                                                    </p>
-                                                </div>
-                                                <div class="col">
-                                                    <p
-                                                        class="small mb-0 text-muted"
-                                                    >
-                                                        Nec Urna Suscipit Ltd
-                                                    </p>
-                                                    <p
-                                                        class="small mb-0 text-muted"
-                                                    >
-                                                        P.O. Box 464, 5975 Eget
-                                                        Avenue
-                                                    </p>
-                                                    <p
-                                                        class="small mb-0 text-muted"
-                                                    >
-                                                        (537) 315-1481
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="my-4" />
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="firstname"
-                                                >Firstname</label
-                                            >
-                                            <input
-                                                type="text"
-                                                id="firstname"
-                                                class="form-control"
-                                                placeholder="Brown"
-                                            />
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="lastname"
-                                                >Lastname</label
-                                            >
-                                            <input
-                                                type="text"
-                                                id="lastname"
-                                                class="form-control"
-                                                placeholder="Asher"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputEmail4">Email</label>
-                                        <input
-                                            type="email"
-                                            class="form-control"
-                                            id="inputEmail4"
-                                            placeholder="brown@asher.me"
-                                        />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputAddress5"
-                                            >Address</label
-                                        >
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="inputAddress5"
-                                            placeholder="P.O. Box 464, 5975 Eget Avenue"
-                                        />
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputCompany5"
-                                                >Company</label
-                                            >
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="inputCompany5"
-                                                placeholder="Nec Urna Suscipit Ltd"
-                                            />
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="inputState5"
-                                                >State</label
-                                            >
-                                            <select
-                                                id="inputState5"
-                                                class="form-control"
-                                            >
-                                                <option selected="">
-                                                    Choose...
-                                                </option>
-                                                <option>...</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="inputZip5">Zip</label>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="inputZip5"
-                                                placeholder="98232"
-                                            />
-                                        </div>
-                                    </div>
-                                    <hr class="my-4" />
-                                    <div class="row mb-4">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="inputPassword4"
-                                                    >Old Password</label
-                                                >
-                                                <input
-                                                    type="password"
-                                                    class="form-control"
-                                                    id="inputPassword5"
-                                                />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputPassword5"
-                                                    >New Password</label
-                                                >
-                                                <input
-                                                    type="password"
-                                                    class="form-control"
-                                                    id="inputPassword5"
-                                                />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputPassword6"
-                                                    >Confirm Password</label
-                                                >
-                                                <input
-                                                    type="password"
-                                                    class="form-control"
-                                                    id="inputPassword6"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p class="mb-2">
-                                                Password requirements
-                                            </p>
-                                            <p class="small text-muted mb-2">
-                                                To create a new password, you
-                                                have to meet all of the
-                                                following requirements:
-                                            </p>
-                                            <ul
-                                                class="small text-muted pl-4 mb-0"
-                                            >
-                                                <li>Minimum 8 character</li>
-                                                <li>
-                                                    At least one special
-                                                    character
-                                                </li>
-                                                <li>At least one number</li>
-                                                <li>
-                                                    Can’t be the same as a
-                                                    previous password
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                        <div class="col-12">
+                            <div class="row align-items-center my-4">
+                                <div class="col">
+                                    <h2 class="h3 mb-0 page-title">Artikel</h2>
+                                </div>
+                                <div class="col-auto">
                                     <button
-                                        type="submit"
+                                        type="button"
+                                        class="btn btn-secondary"
+                                    >
+                                        <span
+                                            class="fe fe-trash fe-12 mr-2"
+                                        ></span
+                                        >Delete
+                                    </button>
+                                    <a
+                                        href="dashboard-blog-new.html"
                                         class="btn btn-primary"
                                     >
-                                        Save Change
-                                    </button>
-                                </form>
+                                        <span
+                                            class="fe fe-filter fe-12 mr-2"
+                                        ></span
+                                        >Create</a
+                                    >
+                                </div>
                             </div>
-                            <!-- /.card-body -->
+                            <!-- table -->
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <table
+                                        class="table table-borderless table-hover"
+                                    >
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div
+                                                        class="custom-control custom-checkbox"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            class="custom-control-input"
+                                                            id="all2"
+                                                        />
+                                                        <label
+                                                            class="custom-control-label"
+                                                            for="all2"
+                                                        ></label>
+                                                    </div>
+                                                </th>
+                                                <th>ID</th>
+                                                <th>User</th>
+                                                <th>Judul</th>
+                                                <th>Tag</th>
+                                                <th>Tanggal</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="custom-control custom-checkbox"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            class="custom-control-input"
+                                                            id="2474"
+                                                        />
+                                                        <label
+                                                            class="custom-control-label"
+                                                            for="2474"
+                                                        ></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="avatar avatar-sm"
+                                                    >
+                                                        <img
+                                                            src="./assets/avatars/face-3.jpg"
+                                                            alt="..."
+                                                            class="avatar-img rounded-circle"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <strong
+                                                            >Brown, Asher
+                                                            D.</strong
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >2474</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        Accumsan Consulting
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >Ap #331-7123 Lobortis
+                                                        Avenue</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <a
+                                                            href="#"
+                                                            class="text-muted"
+                                                            >(958) 421-0798</a
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >Nigeria</small
+                                                    >
+                                                </td>
+                                                <td class="text-muted">
+                                                    13/09/2020
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm dropdown-toggle more-horizontal"
+                                                        type="button"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span
+                                                            class="text-muted sr-only"
+                                                            >Action</span
+                                                        >
+                                                    </button>
+                                                    <div
+                                                        class="dropdown-menu dropdown-menu-right"
+                                                    >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Edit</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Remove</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Assign</a
+                                                        >
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="custom-control custom-checkbox"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            class="custom-control-input"
+                                                            id="2786"
+                                                        />
+                                                        <label
+                                                            class="custom-control-label"
+                                                            for="2786"
+                                                        ></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="avatar avatar-sm"
+                                                    >
+                                                        <img
+                                                            src="./assets/avatars/face-1.jpg"
+                                                            alt="..."
+                                                            class="avatar-img rounded-circle"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <strong
+                                                            >Leblanc, Yoshio
+                                                            V.</strong
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >2786</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        Fringilla Ornare
+                                                        Placerat Consulting
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >287-8300 Nisl.
+                                                        St</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <a
+                                                            href="#"
+                                                            class="text-muted"
+                                                            >(899) 881-3833</a
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >Papua New Guinea</small
+                                                    >
+                                                </td>
+                                                <td class="text-muted">
+                                                    04/05/2019
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm dropdown-toggle more-horizontal"
+                                                        type="button"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span
+                                                            class="text-muted sr-only"
+                                                            >Action</span
+                                                        >
+                                                    </button>
+                                                    <div
+                                                        class="dropdown-menu dropdown-menu-right"
+                                                    >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Edit</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Remove</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Assign</a
+                                                        >
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="custom-control custom-checkbox"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            class="custom-control-input"
+                                                            id="2747"
+                                                        />
+                                                        <label
+                                                            class="custom-control-label"
+                                                            for="2747"
+                                                        ></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="avatar avatar-sm"
+                                                    >
+                                                        <img
+                                                            src="./assets/avatars/face-2.jpg"
+                                                            alt="..."
+                                                            class="avatar-img rounded-circle"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <strong
+                                                            >Hester, Nissim
+                                                            L.</strong
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >2747</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        Tristique Ltd
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >4577 Cras St.</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <a
+                                                            href="#"
+                                                            class="text-muted"
+                                                            >(977) 220-6518</a
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >Central African
+                                                        Republic</small
+                                                    >
+                                                </td>
+                                                <td class="text-muted">
+                                                    21/08/2019
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm dropdown-toggle more-horizontal"
+                                                        type="button"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span
+                                                            class="text-muted sr-only"
+                                                            >Action</span
+                                                        >
+                                                    </button>
+                                                    <div
+                                                        class="dropdown-menu dropdown-menu-right"
+                                                    >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Edit</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Remove</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Assign</a
+                                                        >
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="custom-control custom-checkbox"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            class="custom-control-input"
+                                                            id="2639"
+                                                        />
+                                                        <label
+                                                            class="custom-control-label"
+                                                            for="2639"
+                                                        ></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="avatar avatar-sm"
+                                                    >
+                                                        <img
+                                                            src="./assets/avatars/face-4.jpg"
+                                                            alt="..."
+                                                            class="avatar-img rounded-circle"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <strong
+                                                            >Gardner, Leigh
+                                                            S.</strong
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >2639</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        Orci Luctus Et Inc.
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >P.O. Box 228, 7512
+                                                        Lectus Ave</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <a
+                                                            href="#"
+                                                            class="text-muted"
+                                                            >(537) 315-1481</a
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >United Kingdom</small
+                                                    >
+                                                </td>
+                                                <td class="text-muted">
+                                                    04/08/2019
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm dropdown-toggle more-horizontal"
+                                                        type="button"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span
+                                                            class="text-muted sr-only"
+                                                            >Action</span
+                                                        >
+                                                    </button>
+                                                    <div
+                                                        class="dropdown-menu dropdown-menu-right"
+                                                    >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Edit</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Remove</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Assign</a
+                                                        >
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="custom-control custom-checkbox"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            class="custom-control-input"
+                                                            id="2238"
+                                                        />
+                                                        <label
+                                                            class="custom-control-label"
+                                                            for="2238"
+                                                        ></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="avatar avatar-sm"
+                                                    >
+                                                        <img
+                                                            src="./assets/avatars/face-5.jpg"
+                                                            alt="..."
+                                                            class="avatar-img rounded-circle"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <strong
+                                                            >Higgins, Uriah
+                                                            L.</strong
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >2238</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        Sit Amet Lorem
+                                                        Industries
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >Ap #377-5357 Sed
+                                                        Road</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <a
+                                                            href="#"
+                                                            class="text-muted"
+                                                            >(238) 386-0247</a
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >Canada</small
+                                                    >
+                                                </td>
+                                                <td class="text-muted">
+                                                    26/07/2020
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm dropdown-toggle more-horizontal"
+                                                        type="button"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span
+                                                            class="text-muted sr-only"
+                                                            >Action</span
+                                                        >
+                                                    </button>
+                                                    <div
+                                                        class="dropdown-menu dropdown-menu-right"
+                                                    >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Edit</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Remove</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Assign</a
+                                                        >
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="custom-control custom-checkbox"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            class="custom-control-input"
+                                                            id="2152"
+                                                        />
+                                                        <label
+                                                            class="custom-control-label"
+                                                            for="2152"
+                                                        ></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="avatar avatar-sm"
+                                                    >
+                                                        <img
+                                                            src="./assets/avatars/face-6.jpg"
+                                                            alt="..."
+                                                            class="avatar-img rounded-circle"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <strong
+                                                            >Wheeler, Ralph
+                                                            F.</strong
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >2152</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        Suspendisse LLC
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >Ap #410-5363 Non,
+                                                        Avenue</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <a
+                                                            href="#"
+                                                            class="text-muted"
+                                                            >(587) 675-3258</a
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >Chad</small
+                                                    >
+                                                </td>
+                                                <td class="text-muted">
+                                                    11/09/2019
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm dropdown-toggle more-horizontal"
+                                                        type="button"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span
+                                                            class="text-muted sr-only"
+                                                            >Action</span
+                                                        >
+                                                    </button>
+                                                    <div
+                                                        class="dropdown-menu dropdown-menu-right"
+                                                    >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Edit</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Remove</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Assign</a
+                                                        >
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div
+                                                        class="custom-control custom-checkbox"
+                                                    >
+                                                        <input
+                                                            type="checkbox"
+                                                            class="custom-control-input"
+                                                            id="2488"
+                                                        />
+                                                        <label
+                                                            class="custom-control-label"
+                                                            for="2488"
+                                                        ></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div
+                                                        class="avatar avatar-sm"
+                                                    >
+                                                        <img
+                                                            src="./assets/avatars/face-7.jpg"
+                                                            alt="..."
+                                                            class="avatar-img rounded-circle"
+                                                        />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <strong
+                                                            >Kelley, Sonya
+                                                            Y.</strong
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >2488</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        Dolor Incorporated
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >8250 Molestie
+                                                        St.</small
+                                                    >
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-muted">
+                                                        <a
+                                                            href="#"
+                                                            class="text-muted"
+                                                            >(934) 582-9495</a
+                                                        >
+                                                    </p>
+                                                    <small
+                                                        class="mb-0 text-muted"
+                                                        >British Indian Ocean
+                                                        Territory</small
+                                                    >
+                                                </td>
+                                                <td class="text-muted">
+                                                    30/03/2021
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        class="btn btn-sm dropdown-toggle more-horizontal"
+                                                        type="button"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span
+                                                            class="text-muted sr-only"
+                                                            >Action</span
+                                                        >
+                                                    </button>
+                                                    <div
+                                                        class="dropdown-menu dropdown-menu-right"
+                                                    >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Edit</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Remove</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#"
+                                                            >Assign</a
+                                                        >
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <nav aria-label="Table Paging" class="my-3">
+                                <ul class="pagination justify-content-end mb-0">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"
+                                            >Previous</a
+                                        >
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                        <!-- /.col-12 -->
+                        <!-- .col-12 -->
                     </div>
                     <!-- .row -->
                 </div>

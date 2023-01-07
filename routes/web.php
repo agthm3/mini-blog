@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\SearchController;
@@ -46,5 +47,15 @@ Route::get('/portofolio/{id}', [PortofolioController::class, 'show'])->name('sho
 
 //Kontak Route
 Route::get('/kontak', [KontakController::class, 'index'])->name('index.kontak');
+
+//Dashboard
+Route::prefix('dashboard')->middleware('auth')->group(function () {
+  Route::get('index', [DashboardController::class, 'index'])->name('dashboard.index');
+
+  //Artikel & Blog
+  Route::get('blog', [DashboardController::class, 'blog'] )->name('blog.index');
+  Route::get('create', [DashboardController::class, 'create'])->name('blog.create');
+
+});
 
 require __DIR__.'/auth.php';

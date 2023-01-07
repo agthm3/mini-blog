@@ -19,6 +19,12 @@
         />
         <!-- Icons CSS -->
         <link rel="stylesheet" href="css/feather.css" />
+        <link rel="stylesheet" href="css/select2.css" />
+        <link rel="stylesheet" href="css/dropzone.css" />
+        <link rel="stylesheet" href="css/uppy.min.css" />
+        <link rel="stylesheet" href="css/jquery.steps.css" />
+        <link rel="stylesheet" href="css/jquery.timepicker.css" />
+        <link rel="stylesheet" href="css/quill.snow.css" />
         <!-- Date Range Picker CSS -->
         <link rel="stylesheet" href="css/daterangepicker.css" />
         <!-- App CSS -->
@@ -547,6 +553,16 @@
                                     href="./profile-settings.html"
                                     ><span class="ml-1">Settings</span></a
                                 >
+                                <a
+                                    class="nav-link pl-3"
+                                    href="./profile-security.html"
+                                    ><span class="ml-1">Security</span></a
+                                >
+                                <a
+                                    class="nav-link pl-3"
+                                    href="./profile-notification.html"
+                                    ><span class="ml-1">Notifications</span></a
+                                >
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -807,240 +823,137 @@
             <main role="main" class="main-content">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
-                        <div class="col-12 col-lg-10 col-xl-8">
-                            <h2 class="h3 mb-4 page-title">Settings</h2>
-                            <div class="my-4">
-                                <ul
-                                    class="nav nav-tabs mb-4"
-                                    id="myTab"
-                                    role="tablist"
-                                >
-                                    <li class="nav-item">
-                                        <a
-                                            class="nav-link active"
-                                            id="home-tab"
-                                            data-toggle="tab"
-                                            href="#home"
-                                            role="tab"
-                                            aria-controls="home"
-                                            aria-selected="true"
-                                            >Profile</a
-                                        >
-                                    </li>
-                                </ul>
-                                <form>
-                                    <div class="row mt-5 align-items-center">
-                                        <div class="col-md-3 text-center mb-5">
-                                            <div class="avatar avatar-xl">
-                                                <img
-                                                    src="./assets/avatars/face-1.jpg"
-                                                    alt="..."
-                                                    class="avatar-img rounded-circle"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="row align-items-center">
-                                                <div class="col-md-7">
-                                                    <h4 class="mb-1">
-                                                        Brown, Asher
-                                                    </h4>
-                                                    <p class="small mb-3">
-                                                        <span
-                                                            class="badge badge-dark"
-                                                            >New York, USA</span
-                                                        >
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-4">
-                                                <div class="col-md-7">
-                                                    <p class="text-muted">
-                                                        Lorem ipsum dolor sit
-                                                        amet, consectetur
-                                                        adipiscing elit. Mauris
-                                                        blandit nisl
-                                                        ullamcorper, rutrum
-                                                        metus in, congue lectus.
-                                                        In hac habitasse platea
-                                                        dictumst. Cras urna
-                                                        quam, malesuada vitae
-                                                        risus at, pretium
-                                                        blandit sapien.
-                                                    </p>
-                                                </div>
-                                                <div class="col">
-                                                    <p
-                                                        class="small mb-0 text-muted"
-                                                    >
-                                                        Nec Urna Suscipit Ltd
-                                                    </p>
-                                                    <p
-                                                        class="small mb-0 text-muted"
-                                                    >
-                                                        P.O. Box 464, 5975 Eget
-                                                        Avenue
-                                                    </p>
-                                                    <p
-                                                        class="small mb-0 text-muted"
-                                                    >
-                                                        (537) 315-1481
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="my-4" />
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="firstname"
-                                                >Firstname</label
-                                            >
-                                            <input
-                                                type="text"
-                                                id="firstname"
-                                                class="form-control"
-                                                placeholder="Brown"
-                                            />
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="lastname"
-                                                >Lastname</label
-                                            >
-                                            <input
-                                                type="text"
-                                                id="lastname"
-                                                class="form-control"
-                                                placeholder="Asher"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputEmail4">Email</label>
-                                        <input
-                                            type="email"
-                                            class="form-control"
-                                            id="inputEmail4"
-                                            placeholder="brown@asher.me"
-                                        />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputAddress5"
-                                            >Address</label
-                                        >
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="inputAddress5"
-                                            placeholder="P.O. Box 464, 5975 Eget Avenue"
-                                        />
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputCompany5"
-                                                >Company</label
-                                            >
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="inputCompany5"
-                                                placeholder="Nec Urna Suscipit Ltd"
-                                            />
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="inputState5"
-                                                >State</label
-                                            >
-                                            <select
-                                                id="inputState5"
-                                                class="form-control"
-                                            >
-                                                <option selected="">
-                                                    Choose...
-                                                </option>
-                                                <option>...</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="inputZip5">Zip</label>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="inputZip5"
-                                                placeholder="98232"
-                                            />
-                                        </div>
-                                    </div>
-                                    <hr class="my-4" />
-                                    <div class="row mb-4">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="inputPassword4"
-                                                    >Old Password</label
-                                                >
-                                                <input
-                                                    type="password"
-                                                    class="form-control"
-                                                    id="inputPassword5"
-                                                />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputPassword5"
-                                                    >New Password</label
-                                                >
-                                                <input
-                                                    type="password"
-                                                    class="form-control"
-                                                    id="inputPassword5"
-                                                />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputPassword6"
-                                                    >Confirm Password</label
-                                                >
-                                                <input
-                                                    type="password"
-                                                    class="form-control"
-                                                    id="inputPassword6"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p class="mb-2">
-                                                Password requirements
-                                            </p>
-                                            <p class="small text-muted mb-2">
-                                                To create a new password, you
-                                                have to meet all of the
-                                                following requirements:
-                                            </p>
-                                            <ul
-                                                class="small text-muted pl-4 mb-0"
-                                            >
-                                                <li>Minimum 8 character</li>
-                                                <li>
-                                                    At least one special
-                                                    character
-                                                </li>
-                                                <li>At least one number</li>
-                                                <li>
-                                                    Can’t be the same as a
-                                                    previous password
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <button
-                                        type="submit"
-                                        class="btn btn-primary"
-                                    >
-                                        Save Change
-                                    </button>
-                                </form>
+                        <div class="col-12 col-xl-10">
+                            <div class="row align-items-center my-4">
+                                <div class="col">
+                                    <h2 class="h3 mb-0 page-title">
+                                        Buat Artikel Baru
+                                    </h2>
+                                </div>
                             </div>
-                            <!-- /.card-body -->
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <label for="firstname"
+                                                    >Judul</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    id="firstname"
+                                                    class="form-control"
+                                                />
+                                            </div>
+                                            <div class="col-md-12 mb-4">
+                                                <div class="form-group mb-3">
+                                                    <div
+                                                        class="form-group mb-3"
+                                                    >
+                                                        <label for="customFile"
+                                                            >Foto</label
+                                                        >
+                                                        <div
+                                                            class="custom-file"
+                                                        >
+                                                            <input
+                                                                type="file"
+                                                                class="custom-file-input"
+                                                                id="customFile"
+                                                            />
+                                                            <label
+                                                                class="custom-file-label"
+                                                                for="customFile"
+                                                                >Choose
+                                                                file</label
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- /.card -->
+                                            </div>
+                                            <!-- /.col -->
+                                        </div>
+                                        <hr class="my-4" />
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <label for="simple-select2"
+                                                    >Tag</label
+                                                >
+                                                <select
+                                                    class="form-control select2"
+                                                    id="simple-select2"
+                                                >
+                                                    <optgroup
+                                                        label="Alaskan/Hawaiian Time Zone"
+                                                    >
+                                                        <option value="AK">
+                                                            Alaska
+                                                        </option>
+                                                        <option value="HI">
+                                                            Hawaii
+                                                        </option>
+                                                    </optgroup>
+                                                    <optgroup
+                                                        label="Pacific Time Zone"
+                                                    >
+                                                        <option value="CA">
+                                                            California
+                                                        </option>
+                                                        <option
+                                                            value="NV"
+                                                            disabled="disabled"
+                                                        >
+                                                            Nevada (disabled)
+                                                        </option>
+                                                        <option value="OR">
+                                                            Oregon
+                                                        </option>
+                                                        <option value="WA">
+                                                            Washington
+                                                        </option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-4" />
+                                        <!-- Tempat ck editor -->
+
+                                        <div id="editor"></div>
+                                        <script>
+                                            ClassicEditor.create(
+                                                document.querySelector(
+                                                    "#editor"
+                                                )
+                                            )
+                                                .then((editor) => {
+                                                    console.log(editor);
+                                                })
+                                                .catch((error) => {
+                                                    console.error(error);
+                                                });
+                                        </script>
+
+                                        <hr class="my-4" />
+                                        <div class="form-row">
+                                            <div class="col-md-6"></div>
+                                            <div class="col-md-6 text-right">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-primary"
+                                                >
+                                                    Simpan
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                        <!-- /.col-12 -->
+                        <!-- .col-12 -->
                     </div>
                     <!-- .row -->
                 </div>
@@ -1291,6 +1204,10 @@
             <!-- main -->
         </div>
         <!-- .wrapper -->
+        <!-- select2 -->
+        <script src="js/select2.min.js"></script>
+        <!-- CK Editor -->
+        <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/moment.min.js"></script>
@@ -1300,6 +1217,233 @@
         <script src="js/jquery.stickOnScroll.js"></script>
         <script src="js/tinycolor-min.js"></script>
         <script src="js/config.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/jquery.steps.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.timepicker.js"></script>
+        <script src="js/dropzone.min.js"></script>
+        <script src="js/uppy.min.js"></script>
+        <script src="js/quill.min.js"></script>
+        <script>
+            $(".select2").select2({
+                theme: "bootstrap4",
+            });
+            $(".select2-multi").select2({
+                multiple: true,
+                theme: "bootstrap4",
+            });
+            $(".drgpicker").daterangepicker({
+                singleDatePicker: true,
+                timePicker: false,
+                showDropdowns: true,
+                locale: {
+                    format: "MM/DD/YYYY",
+                },
+            });
+            $(".time-input").timepicker({
+                scrollDefault: "now",
+                zindex: "9999" /* fix modal open */,
+            });
+            /** date range picker */
+            if ($(".datetimes").length) {
+                $(".datetimes").daterangepicker({
+                    timePicker: true,
+                    startDate: moment().startOf("hour"),
+                    endDate: moment().startOf("hour").add(32, "hour"),
+                    locale: {
+                        format: "M/DD hh:mm A",
+                    },
+                });
+            }
+            var start = moment().subtract(29, "days");
+            var end = moment();
+
+            function cb(start, end) {
+                $("#reportrange span").html(
+                    start.format("MMMM D, YYYY") +
+                        " - " +
+                        end.format("MMMM D, YYYY")
+                );
+            }
+            $("#reportrange").daterangepicker(
+                {
+                    startDate: start,
+                    endDate: end,
+                    ranges: {
+                        Today: [moment(), moment()],
+                        Yesterday: [
+                            moment().subtract(1, "days"),
+                            moment().subtract(1, "days"),
+                        ],
+                        "Last 7 Days": [moment().subtract(6, "days"), moment()],
+                        "Last 30 Days": [
+                            moment().subtract(29, "days"),
+                            moment(),
+                        ],
+                        "This Month": [
+                            moment().startOf("month"),
+                            moment().endOf("month"),
+                        ],
+                        "Last Month": [
+                            moment().subtract(1, "month").startOf("month"),
+                            moment().subtract(1, "month").endOf("month"),
+                        ],
+                    },
+                },
+                cb
+            );
+            cb(start, end);
+            $(".input-placeholder").mask("00/00/0000", {
+                placeholder: "__/__/____",
+            });
+            $(".input-zip").mask("00000-000", {
+                placeholder: "____-___",
+            });
+            $(".input-money").mask("#.##0,00", {
+                reverse: true,
+            });
+            $(".input-phoneus").mask("(000) 000-0000");
+            $(".input-mixed").mask("AAA 000-S0S");
+            $(".input-ip").mask("0ZZ.0ZZ.0ZZ.0ZZ", {
+                translation: {
+                    Z: {
+                        pattern: /[0-9]/,
+                        optional: true,
+                    },
+                },
+                placeholder: "___.___.___.___",
+            });
+            // editor
+            var editor = document.getElementById("editor");
+            if (editor) {
+                var toolbarOptions = [
+                    [
+                        {
+                            font: [],
+                        },
+                    ],
+                    [
+                        {
+                            header: [1, 2, 3, 4, 5, 6, false],
+                        },
+                    ],
+                    ["bold", "italic", "underline", "strike"],
+                    ["blockquote", "code-block"],
+                    [
+                        {
+                            header: 1,
+                        },
+                        {
+                            header: 2,
+                        },
+                    ],
+                    [
+                        {
+                            list: "ordered",
+                        },
+                        {
+                            list: "bullet",
+                        },
+                    ],
+                    [
+                        {
+                            script: "sub",
+                        },
+                        {
+                            script: "super",
+                        },
+                    ],
+                    [
+                        {
+                            indent: "-1",
+                        },
+                        {
+                            indent: "+1",
+                        },
+                    ], // outdent/indent
+                    [
+                        {
+                            direction: "rtl",
+                        },
+                    ], // text direction
+                    [
+                        {
+                            color: [],
+                        },
+                        {
+                            background: [],
+                        },
+                    ], // dropdown with defaults from theme
+                    [
+                        {
+                            align: [],
+                        },
+                    ],
+                    ["clean"], // remove formatting button
+                ];
+                var quill = new Quill(editor, {
+                    modules: {
+                        toolbar: toolbarOptions,
+                    },
+                    theme: "snow",
+                });
+            }
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                "use strict";
+                window.addEventListener(
+                    "load",
+                    function () {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms =
+                            document.getElementsByClassName("needs-validation");
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(
+                            forms,
+                            function (form) {
+                                form.addEventListener(
+                                    "submit",
+                                    function (event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add("was-validated");
+                                    },
+                                    false
+                                );
+                            }
+                        );
+                    },
+                    false
+                );
+            })();
+        </script>
+        <script>
+            var uptarg = document.getElementById("drag-drop-area");
+            if (uptarg) {
+                var uppy = Uppy.Core()
+                    .use(Uppy.Dashboard, {
+                        inline: true,
+                        target: uptarg,
+                        proudlyDisplayPoweredByUppy: false,
+                        theme: "dark",
+                        width: 770,
+                        height: 210,
+                        plugins: ["Webcam"],
+                    })
+                    .use(Uppy.Tus, {
+                        endpoint: "https://master.tus.io/files/",
+                    });
+                uppy.on("complete", (result) => {
+                    console.log(
+                        "Upload complete! We’ve uploaded these files:",
+                        result.successful
+                    );
+                });
+            }
+        </script>
         <script src="js/apps.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script
